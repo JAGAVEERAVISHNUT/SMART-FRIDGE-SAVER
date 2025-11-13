@@ -103,10 +103,8 @@ Recipe fetching from expiring ingredients
 - Get your API key at: https://spoonacular.com/food-api
 
 ### Environment Variables
-\`\`\`
-# Optional - for real recipe API
-NEXT_PUBLIC_SPOONACULAR_API_KEY=your_api_key_here
-\`\`\`
+Removed the exposed API key example. Add your API key to Vercel environment variables instead.
+Contact your development team for the API key configuration in production.
 
 ## Authentication
 Currently uses localStorage for demo purposes. For production:
