@@ -1,0 +1,133 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated to new color palette */
+  --background: #fafcf8;
+  --foreground: #1e1e1e;
+  --card: #ffffff;
+  --card-foreground: #1e1e1e;
+  --popover: #ffffff;
+  --popover-foreground: #1e1e1e;
+  --primary: #3faf6d;
+  --primary-foreground: #ffffff;
+  --secondary: #2c8f6b;
+  --secondary-foreground: #ffffff;
+  --muted: #f5f5f5;
+  --muted-foreground: #6e7b6d;
+  --accent: #f5a623;
+  --accent-foreground: #ffffff;
+  --destructive: #e24b4b;
+  --destructive-foreground: #ffffff;
+  --border: #e8e8e8;
+  --input: #e8e8e8;
+  --ring: #3faf6d;
+  --chart-1: #3faf6d;
+  --chart-2: #2c8f6b;
+  --chart-3: #f5a623;
+  --chart-4: #059669;
+  --chart-5: #047857;
+  --radius: 0.75rem;
+  --surface: #ffffff;
+  --error: #e24b4b;
+  --warning: #f5a623;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: #0f1419;
+  --foreground: #f5f5f5;
+  --card: #1a1f2e;
+  --card-foreground: #f5f5f5;
+  --popover: #1a1f2e;
+  --popover-foreground: #f5f5f5;
+  --primary: #3faf6d;
+  --primary-foreground: #0f1419;
+  --secondary: #2c8f6b;
+  --secondary-foreground: #f5f5f5;
+  --muted: #2d3748;
+  --muted-foreground: #9ca3af;
+  --accent: #f5a623;
+  --accent-foreground: #0f1419;
+  --destructive: #f87171;
+  --destructive-foreground: #0f1419;
+  --border: #2d3748;
+  --input: #2d3748;
+  --ring: #3faf6d;
+  --chart-1: #3faf6d;
+  --chart-2: #2c8f6b;
+  --chart-3: #f5a623;
+  --chart-4: #059669;
+  --chart-5: #047857;
+  --surface: #1a1f2e;
+  --error: #e24b4b;
+  --warning: #f5a623;
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-surface: var(--surface);
+  --color-error: var(--error);
+  --color-warning: var(--warning);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
